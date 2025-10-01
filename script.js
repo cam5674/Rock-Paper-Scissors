@@ -5,7 +5,7 @@ function playRound(humanChoice, computerChoice ) {
 
     if (humanChoice === "rock" && computerChoice === "paper") {
         console.log("You lose! Paper beats Rock")
-        return "Computer"
+        return "computer"
     } else if (humanChoice === "rock" && computerChoice === "scissors") {
         console.log("You win! Rock beats Scissors")
         return "human"
@@ -29,10 +29,9 @@ function playRound(humanChoice, computerChoice ) {
 }
 
 
-function getCumpterChoice() {
+function getComputerChoice() {
     // get random number 0-2
-    randomNumber = Math.floor(Math.random() * 3)
-    console.log(randomNumber)
+    let randomNumber = Math.floor(Math.random() * 3)
 
     // map numbers to choices
     if (randomNumber === 0) {
@@ -57,7 +56,7 @@ let computerCount = 0;
 let gameCount = 0;
 while (gameCount != 5) {
     const humanSelection =  getHumanChoice();
-    const computerSelection = getCumpterChoice();
+    const computerSelection = getComputerChoice();
     let result = playRound(humanSelection, computerSelection);
 
     if (result === "human") {
@@ -72,4 +71,4 @@ while (gameCount != 5) {
 
 }
 
-console.log(`Thank you for playing.\nTotal Human wins ${humanCount}\nTotal Computer wins ${computerCount}`)
+console.log(`Thank you for playing.\nTotal Human wins: ${humanCount}\nTotal Computer wins: ${computerCount}`)
