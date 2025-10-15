@@ -2,11 +2,57 @@
 <html lang="en">
 <head>
     <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
+    <div class="container">
+        <div class="game">
+            <div class="text-box">
+                <p id="box"></p>
+            </div>
+        </div>
+        <div class ="buttons">
+            <button class="rps">Rock</button>
+            <button class="rps">Paper</button>
+            <button class="rps">Scissors</button>
+        </div>
+    </div>
+
+    <script>
+        const buttons = document.querySelectorAll('.rps');
+        let humanCount = 0;
+        let computerCount = 0;
+
+        buttons.forEach(button => {
+            button.addEventListener('click', (event) => {
+            const move = event.target.textContent.toLowerCase();
+            const computerSelection = getComputerChoice();
+            let result = playRound(move, computerSelection);
+      
+            if (result === "human") {
+                humanCount += 1;
+            } else if (result == "computer") {
+                computerCount += 1;
+            } 
+
+
+            if (humanCount == 5 ){
+                document.getElementById("box").textContent = "Human wins!";
+            } else if (computerCount == 5) {
+                 document.getElementById("box").textContent = "Computer wins!";
+            } else {
+                document.getElementById("box").textContent = result;
+            }
+
+
+        });
+
+        });
+
+    </script>
     
     
 </body>

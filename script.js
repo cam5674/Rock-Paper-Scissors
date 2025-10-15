@@ -50,6 +50,7 @@ function getHumanChoice() {
     return response.toLowerCase()
 }
 
+/*
 
 let humanCount = 0;
 let computerCount = 0;
@@ -72,3 +73,28 @@ while (gameCount != 5) {
 }
 
 console.log(`Thank you for playing.\nTotal Human wins: ${humanCount}\nTotal Computer wins: ${computerCount}`)
+
+*/
+
+/*
+
+let humanCount = 0;
+let computerCount = 0;
+let gameCount = 0;
+while (gameCount != 5) {
+
+    if (result === "human") {
+        humanCount += 1;
+    } else if (result == "computer") {
+        computerCount += 1;
+    } 
+
+    gameCount += 1;
+
+
+
+}
+
+console.log(`Thank you for playing.\nTotal Human wins: ${humanCount}\nTotal Computer wins: ${computerCount}`)
+
+*/
