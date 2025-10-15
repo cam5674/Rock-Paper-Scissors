@@ -22,16 +22,20 @@
     </div>
 
     <script>
+        
         const buttons = document.querySelectorAll('.rps');
         let humanCount = 0;
         let computerCount = 0;
 
+        // iterate over each button
         buttons.forEach(button => {
             button.addEventListener('click', (event) => {
             const move = event.target.textContent.toLowerCase();
             const computerSelection = getComputerChoice();
             let result = playRound(move, computerSelection);
-      
+            
+
+            // game logic and print out correct results with getElementById
             if (result === "human") {
                 humanCount += 1;
             } else if (result == "computer") {
@@ -44,7 +48,7 @@
             } else if (computerCount == 5) {
                  document.getElementById("box").textContent = "Computer wins!";
             } else {
-                document.getElementById("box").textContent = result;
+                document.getElementById("box").textContent = `Human: ${humanCount} Computer: ${computerCount}`;
             }
 
 
