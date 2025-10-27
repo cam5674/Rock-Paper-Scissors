@@ -4,24 +4,31 @@
 function playRound(humanChoice, computerChoice ) {
 
     if (humanChoice === "rock" && computerChoice === "paper") {
+        document.getElementById("log-box").textContent = "You lose! Paper beats Rock";
         console.log("You lose! Paper beats Rock")
         return "computer"
     } else if (humanChoice === "rock" && computerChoice === "scissors") {
+        document.getElementById("log-box").textContent = "You win! Rock beats Scissors";
         console.log("You win! Rock beats Scissors")
         return "human"
     } else if (humanChoice === "paper" && computerChoice === "scissors") {
+        document.getElementById("log-box").textContent = "You lose! Scissors beats Paper";
         console.log("You lose! Scissors beats Paper")
         return "computer"
     } else if (humanChoice === "paper" && computerChoice === "rock") {
+        document.getElementById("log-box").textContent = "You win! Paper beats Rock";
         console.log("You win! Paper beats Rock")
         return "human"
     } else if (humanChoice === "scissors" && computerChoice === "paper") {
+        document.getElementById("log-box").textContent = "You win! Scissors beats Paper";
         console.log("You win! Scissors beats Paper")
         return "human"
     } else if (humanChoice === "scissors" && computerChoice === "rock") {
+        document.getElementById("log-box").textContent = "You lose! Rock beats Scissors";
         console.log("You lose! Rock beats Scissors")
         return "computer"
     } else {
+        document.getElementById("log-box").textContent = "It's a tie! Try again if you dare!";
         console.log("It's a tie! Try again if you dare!")
         return "tie"
     }
